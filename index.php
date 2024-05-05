@@ -54,21 +54,29 @@
 </head>
 <body>
     <h1 class="text-center">Ecco gli hotel disponibili</h1>
-    <div>
-        <ul>
-            <?php foreach($hotels as $hotel) { ?>
-                <li class=" list-unstyled mb-3">
-                    <div>Nome: <?php echo $hotel['name']?></div>
-                    <div>Descrizione:  <?php echo $hotel['description']?></div>
-                    <div>Parcheggio:  <?php echo $hotel['parking']?></div>
-                    <div>Voto:  <?php echo $hotel['vote']?></div>
-                    <div>Distanza dal centro:  <?php echo $hotel['distance_to_center']?></div>
-                </li>
-            <?php } ?>
-        </ul>
-
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrizione</th>
+                    <th>Parcheggio</th>
+                    <th>Voto</th>
+                    <th>Distanza dal centro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($hotels as $hotel): ?>
+                <tr>
+                    <td><?php echo $hotel['name']; ?></td>
+                    <td><?php echo $hotel['description']; ?></td>
+                    <td><?php echo $hotel['parking'] ? 'Disponibile' : 'Non disponibile'; ?></td>
+                    <td><?php echo $hotel['vote']; ?></td>
+                    <td><?php echo $hotel['distance_to_center']; ?> km</td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
-
-
 </body>
 </html>
