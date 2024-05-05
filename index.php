@@ -58,11 +58,11 @@
         <ul>
             <?php foreach($hotels as $hotel) { ?>
                 <li class=" list-unstyled mb-3">
-                    <div>Nome:</div>
-                    <div>Descrizione:</div>
-                    <div>Parcheggio:</div>
-                    <div>Voto:</div>
-                    <div>Distanza dal centro:</div>
+                    <div>Nome: <?php echo $hotel['name']?></div>
+                    <div>Descrizione:  <?php echo $hotel['description']?></div>
+                    <div>Parcheggio:  <?php echo $hotel['parking']?></div>
+                    <div>Voto:  <?php echo $hotel['vote']?></div>
+                    <div>Distanza dal centro:  <?php echo $hotel['distance_to_center']?></div>
                 </li>
             <?php } ?>
         </ul>
