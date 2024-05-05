@@ -39,9 +39,7 @@
         ],
 
     ];
-    foreach($hotels as $hotel){
-        var_dump($hotel);
-    }
+
 
 
 ?>
@@ -55,7 +53,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ecco gli hotel disponibili</h1>
+    <h1 class="text-center">Ecco gli hotel disponibili</h1>
+    <div>
+        <ul>
+            <?php foreach($hotels as $hotel) { ?>
+                <li class=" list-unstyled mb-3">
+                    <div>Nome:</div>
+                    <div>Descrizione:</div>
+                    <div>Parcheggio:</div>
+                    <div>Voto:</div>
+                    <div>Distanza dal centro:</div>
+                </li>
+            <?php } ?>
+        </ul>
+
+    </div>
 
 
 </body>
